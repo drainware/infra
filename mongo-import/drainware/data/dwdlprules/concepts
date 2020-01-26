@@ -1,0 +1,9 @@
+{ "_id" : { "$oid" : "5016b9e94e24a0bf9d9ac647" }, "concept" : "Credentials" }
+{ "_id" : { "$oid" : "5007b361375b3e5ea24d0ea5" }, "concept" : "Credit Cards" }
+{ "_id" : { "$oid" : "5007b39e375b3e5ea24d0ea7" }, "concept" : "Sensitive System Configuration" }
+{ "_id" : { "$oid" : "5007b36d375b3e5ea24d0ea6" }, "concept" : "Hacking Information" }
+{ "_id" : { "$oid" : "5016b9c74e24a0bf9d9ac644" }, "concept" : "Cryptography Information" }
+{ "_id" : { "$oid" : "5016b9df4e24a0bf9d9ac646" }, "concept" : "HHRR Company Information" }
+{ "_id" : { "$oid" : "5016b9f04e24a0bf9d9ac648" }, "concept" : "Pastebin" }
+{ "_id" : { "$oid" : "5016b99d4e24a0bf9d9ac643" }, "concept" : "Sensitive Web Configuration" }
+{ "_id" : { "$oid" : "5016b9d34e24a0bf9d9ac645" }, "concept" : "Sensitive Company Information" }

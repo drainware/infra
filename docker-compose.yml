@@ -1,0 +1,75 @@
+version: '2'
+
+services:
+    balancer:
+        build: balancer
+        ports:
+            - 80:80
+            - 192.168.125:443:443
+            - 192.168.1.104:443:444
+            - 192.168.1.104:15671:15671
+        command: /entrypoint.sh
+        volumes:
+            - ./drainware:/opt/drainware
+            - ./ddi:/ddi
+            - ./site.conf:/etc/nginx/conf.d/default.conf
+            - ./balancer/stunnel/stunnel.conf:/etc/stunnel/stunnel.conf
+            - ./balancer/stunnel/default.conf:/etc/default/stunnel4
+            - ./ssl-certs:/etc/ssl/certs:ro
+        networks:
+            - drainware-network
+    ddi:
+        build: ./php
+        command: /entrypoint.sh
+        volumes:
+            - ./drainware:/opt/drainware            
+            - ./ddi:/ddi
+        networks:
+            - drainware-network
+    mongo:
+        image: mongo:3.7.1
+        networks:
+            - drainware-network
+        volumes:
+            - ./mongo/datadir:/data/db
+    mongo-import:
+        build: ./mongo-import
+        depends_on:
+            - mongo
+        networks:
+            - drainware-network
+    redis:
+        image: redis:3.2
+        volumes:
+            - ./redis/data_dir:/data
+        networks:
+            - drainware-network
+    rabbitmq:
+        build: ./rabbitmq
+        environment:
+            - RABBITMQ_USER=admin
+            - RABBITMQ_PASSWORD=drainware
+            - RABBITMQ_VHOST=rabbot.drainware.com
+        volumes:
+            - ./rabbitmq/rabbitmq-data:/var/lib/rabbitmq
+        ports:
+            - 15672:15672
+            - 5672:5672
+        networks:
+            - drainware-network
+    endpoint:
+        environment:
+          - LIC=SXFZ-4EX9-1F51-O7D5
+          - HOSTNAME=TEST_MACHINE_PC
+          - IP=192.168.1.23
+          - USERNAME=drainware
+        build: ./endpoint
+        command: /entrypoint.sh
+        volumes:
+            - ./ssl-certs:/tmp/certs:ro
+        networks:
+            - drainware-network
+
+networks:
+    drainware-network:
+        driver: bridge

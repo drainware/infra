@@ -1,0 +1,6 @@
+#!/bin/bash
+
+
+php /var/www/drainware/ddi/lib/cli/atp/pdfex.php $1
+
+

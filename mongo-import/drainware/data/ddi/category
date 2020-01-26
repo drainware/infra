@@ -1,0 +1,7 @@
+{ "_id" : { "$oid" : "4edccd229224c1b094cde010" }, "category" : "adu" }
+{ "_id" : { "$oid" : "4edccd279224c1b094cde011" }, "category" : "mal" }
+{ "_id" : { "$oid" : "4edccd869224c1b094cde012" }, "category" : "com" }
+{ "_id" : { "$oid" : "4edccd949224c1b094cde013" }, "category" : "ent" }
+{ "_id" : { "$oid" : "4edccd9d9224c1b094cde014" }, "category" : "net" }
+{ "_id" : { "$oid" : "4edccda69224c1b094cde015" }, "category" : "org" }
+{ "_id" : { "$oid" : "4edccdaf9224c1b094cde016" }, "category" : "edu" }

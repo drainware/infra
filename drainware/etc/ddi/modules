@@ -1,0 +1,8 @@
+ddimodule_main_all = on
+ddimodule_group_all = on
+ddimodule_user_all = on
+ddimodule_webfilter_all = on
+ddimodule_dlp_all = on
+ddimodule_atp_all = on
+ddimodule_reporter_all = on
+ddimodule_network_all = on

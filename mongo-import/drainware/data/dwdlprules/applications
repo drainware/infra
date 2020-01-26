@@ -1,0 +1,7 @@
+{ "_id" : { "$oid" : "512cdef5772d49d21d00006f" }, "application" : "chrome.exe", "description" : "Google Chrome", "editable" : false }
+{ "_id" : { "$oid" : "512cdf0e772d49d11d000055" }, "application" : "firefox.exe", "description" : "Mozilla Firefox", "editable" : false }
+{ "_id" : { "$oid" : "512cdf29772d49d31d000055" }, "application" : "iexplorer.exe", "description" : "Internet Explorer", "editable" : false }
+{ "_id" : { "$oid" : "512ce051772d49d31d000057" }, "application" : "safari.exe", "description" : "Safari", "editable" : false }
+{ "_id" : { "$oid" : "512ce05c772d49d21d000072" }, "application" : "opera.exe", "description" : "Opera", "editable" : false }
+{ "_id" : { "$oid" : "512ce080772d49d11d000057" }, "application" : "outlook.exe", "description" : "Outlook", "editable" : false }
+{ "_id" : { "$oid" : "512ce08a772d49cd1d00005a" }, "application" : "thunderbird.exe", "description" : "Thunderbird", "editable" : false }

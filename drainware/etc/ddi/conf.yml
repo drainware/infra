@@ -1,0 +1,82 @@
+---
+configuration:
+  language:
+    value: en
+    type: option
+  authentication:
+    value: local
+    type: option
+  ldap:
+    ssl:
+      value: false
+      type: boolean
+    version:
+      value: 3
+      type: number
+    user:
+      value: Administrator
+      type: text
+    password:
+      value: SuP3rP455W0rD
+      type: password
+    host:
+      value: 192.168.23.100
+      type: ip
+    port:
+      value: 389
+      type: number
+    dn:
+      value: DRAINWARE\Administrator
+      type: text
+    base:
+      value: ou=Drainware,dc=drainware,dc=local
+      type: text
+    username_attr:
+      value: sAMAccountName
+      type: text
+    recursive_groups:
+      value: true
+      type: boolean
+  icap_listener:
+    web-filter:
+      host:
+        value: 127.0.0.1
+        type: ip
+      port:
+        value: 3333
+        type: number
+    dlp:
+      host:
+        value: 127.0.0.1
+        type: ip
+      port:
+        value: 3334
+        type: number
+  ssl_certificate:
+    certificate:
+      value:
+      type: file
+      path: /tmp
+  mail_config:
+    server:
+      value: smtp.gmail.com
+      type: text
+    port:
+      value: 465
+      type: text
+    ssl:
+      value: true
+      type: boolean
+    e-mail:
+      value: info@drainware.com
+      type: text
+    username:
+      value: info@drainware.com
+      type: text
+    password:
+      value: SuP3rP455W0rD
+      type: password
+  notifications:
+    e-mail:
+      value: info@drainware.com
+      type: text
